@@ -5,7 +5,7 @@
 <script>
   const { createApp, ref } = Vue
 
-  // Un componente en Vuejs es un simple objeto de js que sigue un interfaz para definir el html,
+  // Un componente en Vuejs es un simple objeto de js que sigue una interfaz para definir el html,
   // la data y acciones del componente
   const Counter = {
     template: `
@@ -34,6 +34,7 @@
     }
   };
 
+  // Anidar componentes dentro de un componente principal.
   const App = {
     template: `
       <header>Header</header>
@@ -45,6 +46,7 @@
   };
 
   const app = createApp(App);
+  // Registrar el componente dentro del componente principal
   app.component('Counter', Counter)
   app.mount('#app');
 </script>
